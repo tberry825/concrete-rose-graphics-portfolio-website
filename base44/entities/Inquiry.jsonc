@@ -1,0 +1,73 @@
+{
+  "name": "Inquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone"
+    },
+    "company": {
+      "type": "string",
+      "title": "Company / Organization"
+    },
+    "project_type": {
+      "type": "string",
+      "title": "Project Type"
+    },
+    "budget_range": {
+      "type": "string",
+      "title": "Budget Range"
+    },
+    "timeline": {
+      "type": "string",
+      "title": "Desired Timeline"
+    },
+    "message": {
+      "type": "string",
+      "title": "Project Details"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "default": "new",
+      "enum": [
+        "new",
+        "contacted",
+        "archived"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "project_type",
+    "message"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

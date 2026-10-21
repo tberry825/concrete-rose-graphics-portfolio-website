@@ -1,0 +1,51 @@
+{
+  "description": "Sends Tanesha an email with the full details whenever a new project inquiry is submitted.",
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "new_inquiry_notification",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "send_inquiry_email": {
+          "call": "send_email",
+          "with": {
+            "template_name": "NewInquiry",
+            "to": "tberry@concreterosegraphics.com",
+            "subject": "New Project Inquiry from ${ .trigger.data.name }",
+            "description": "Notifies Tanesha of a new inquiry with all submitted details",
+            "variables": {
+              "name": "${ .trigger.data.name }",
+              "email": "${ .trigger.data.email }",
+              "phone": "${ .trigger.data.phone }",
+              "company": "${ .trigger.data.company }",
+              "project_type": "${ .trigger.data.project_type }",
+              "budget_range": "${ .trigger.data.budget_range }",
+              "timeline": "${ .trigger.data.timeline }",
+              "message": "${ .trigger.data.message }",
+              "submitted_at": "${ .trigger.data.created_date }"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Send inquiry email",
+            "description": "Full details to Tanesha"
+          }
+        }
+      }
+    ]
+  },
+  "trigger": {
+    "condition": null,
+    "config": {
+      "trigger_type": "entity",
+      "events": [
+        "create"
+      ],
+      "entity_name": "Inquiry"
+    }
+  },
+  "name": "New Inquiry Notification"
+}

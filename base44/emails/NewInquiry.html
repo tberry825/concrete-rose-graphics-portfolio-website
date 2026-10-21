@@ -1,0 +1,98 @@
+<mjml>
+  <mj-head>
+    <mj-title>New Project Inquiry from {{name}}</mj-title>
+    <mj-preview>A new inquiry was just submitted through your website.</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Inter, Helvetica, Arial, sans-serif" />
+      <mj-section background-color="#0a0a0b" padding="0 36px" />
+      <mj-text color="#f8f3f7" font-size="15px" line-height="1.6" padding="0" />
+      <mj-button background-color="#8a2be2" border-radius="12px" font-weight="700" inner-padding="14px 28px" align="left" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#0a0a0b">
+    <!-- Header band -->
+    <mj-section background-color="#8a2be2" padding="24px 36px">
+      <mj-column>
+        <mj-image src="https://media.base44.com/images/public/6aa974d5b6276f4a026f44f6/a20081a13_logo.png" alt="Concrete Rose Graphics" width="120px" align="left" padding="0" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Headline -->
+    <mj-section padding="40px 36px 12px">
+      <mj-column>
+        <mj-text font-family="Clash Display, Arial, sans-serif" font-size="30px" font-weight="700" line-height="1.1" color="#ffffff">
+          New Project Inquiry
+        </mj-text>
+        <mj-text color="#eee7f6" font-size="15px" padding-top="8px">
+          A new inquiry was just submitted through your website. Here are the full details.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Inquiry details card -->
+    <mj-section padding="16px 36px 8px">
+      <mj-column>
+        <mj-text color="#eee7f6" font-size="12px" text-transform="uppercase" letter-spacing="2px" padding-bottom="6px">
+          Submitted {{submitted_at}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 36px 32px">
+      <mj-column>
+        <mj-table cellpadding="0" cellspacing="0" border="1px solid #e5e7eb" container-background-color="#0a0a0b" width="100%">
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;width:35%;">Name</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;font-weight:600;">{{name}}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Email</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;">{{email}}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Phone</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;">{{phone}}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Company</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;">{{company}}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Project Type</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;">{{project_type}}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Budget Range</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;">{{budget_range}}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;">
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;">Timeline</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;">{{timeline}}</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;color:#eee7f6;font-size:13px;text-transform:uppercase;letter-spacing:1px;vertical-align:top;">Message</td>
+            <td style="padding:12px 16px;color:#f8f3f7;font-size:15px;line-height:1.6;">{{message}}</td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- CTA -->
+    <mj-section padding="0 36px 40px">
+      <mj-column>
+        <mj-button background-color="#8a2be2" color="#ffffff" border-radius="12px" font-weight="700" href="https://concreterosegraphics.com" align="left">
+          View in Dashboard
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#8a2be2" padding="20px 36px">
+      <mj-column>
+        <mj-text color="#ffffff" font-size="12px" align="center">
+          Concrete Rose Graphics, LLC
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
